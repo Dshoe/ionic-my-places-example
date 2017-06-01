@@ -24,3 +24,5 @@ $ ionic cordova run ios
 
 Substitute ios for android if not on a Mac.
 
+Credit: https://www.youtube.com/watch?v=LHzAa4NKFx0
+

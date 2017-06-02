@@ -9,11 +9,11 @@
 
 
 <ion-content padding>
-  <form>
+  <form (ngSubmit)="onAddPlace(f.value)" #f="ngForm">
     <ion-item>
       <ion-label>Title</ion-label>
       <ion-input type="text" name="title"></ion-input>
     </ion-item>
-    <button ion-button block>Add Place</button>
+    <button ion-button block type="submit">Add Place</button>
   </form>
 </ion-content>

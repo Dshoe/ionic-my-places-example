@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import {PlacesService} from "../../services/places.services";
 
-/**
- * Generated class for the NewPlacePage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-new-place',
@@ -14,11 +9,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NewPlacePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  constructor(private placesService: PlacesService) {}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NewPlacePage');
+  onAddPlace(value: {title: string}) {
+    this.placesService.addPlace(value);
   }
 
 }

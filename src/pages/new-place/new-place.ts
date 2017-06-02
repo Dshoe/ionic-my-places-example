@@ -9,10 +9,11 @@ import {PlacesService} from "../../services/places.services";
 })
 export class NewPlacePage {
 
-  constructor(private placesService: PlacesService) {}
+  constructor(private placesService: PlacesService, private navController: NavController) {}
 
   onAddPlace(value: {title: string}) {
     this.placesService.addPlace(value);
+    this.navController.pop();
   }
 
 }

@@ -9,6 +9,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NewPlacePage } from "../pages/new-place/new-place";
 import { PlacesService } from "../services/places.services";
+import {Geolocation} from "@ionic-native/geolocation";
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { PlacesService } from "../services/places.services";
     StatusBar,
     SplashScreen,
     PlacesService,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

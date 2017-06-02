@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import {NewPlacePage} from "../new-place/new-place";
+import {PlacesService} from "../../services/places.services";
 
 @Component({
   selector: 'page-home',
@@ -8,8 +9,14 @@ import {NewPlacePage} from "../new-place/new-place";
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  places: {title: string}[] = [];
 
+  constructor(public navCtrl: NavController, private placesService: PlacesService) {
+
+  }
+
+  ionViewWillEnter() {
+    this.places = this.placesService.getPlaces();
   }
 
   onLoadNewPlace() {

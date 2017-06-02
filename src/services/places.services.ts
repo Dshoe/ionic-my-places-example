@@ -6,7 +6,7 @@ export class PlacesService {
     this.places.push(place);
   }
 
-  getPlace() {
+  getPlaces() {
     return this.places.slice();
   }
 

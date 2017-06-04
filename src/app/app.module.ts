@@ -9,13 +9,15 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { NewPlacePage } from "../pages/new-place/new-place";
 import { PlacesService } from "../services/places.services";
-import {Geolocation} from "@ionic-native/geolocation";
+import { Geolocation } from "@ionic-native/geolocation";
+import { PlacePage } from "../pages/place/place";
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    NewPlacePage
+    NewPlacePage,
+    PlacePage
   ],
   imports: [
     BrowserModule,
@@ -26,7 +28,8 @@ import {Geolocation} from "@ionic-native/geolocation";
   entryComponents: [
     MyApp,
     HomePage,
-    NewPlacePage
+    NewPlacePage,
+    PlacePage
   ],
   providers: [
     StatusBar,
